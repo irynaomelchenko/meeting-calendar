@@ -1,0 +1,205 @@
+body {
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  position: relative; }
+
+.container {
+  max-width: 1200px;
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto; }
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  .top-section .new-event-btn {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    max-width: 200px;
+    width: 200px;
+    min-width: 123px;
+    padding: 10px;
+    background-color: #e8f0fe;
+    border-radius: 4px;
+    margin: 10px 0 10px 20px; }
+    .top-section .new-event-btn:visited {
+      color: rgba(0, 0, 0, 0.6); }
+    .top-section .new-event-btn:hover {
+      background-color: #d1e2ff; }
+
+.top-section__header {
+  width: 140px;
+  margin-left: 20px; }
+
+.top-section__right-side {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: calc(100% - 170px);
+  min-width: 158px; }
+
+#selectMember {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 4px;
+  max-width: 200px;
+  width: 200px;
+  min-width: 123px;
+  margin: 10px 0 10px 20px;
+  cursor: pointer; }
+  #selectMember:focus {
+    border-color: #85b7d9; }
+  #selectMember:hover {
+    border-color: rgba(34, 36, 38, 0.35); }
+
+.main-section {
+  border: 1px solid #d8d7d7; }
+  .main-section .row {
+    display: flex;
+    justify-content: space-between; }
+  .main-section .row-1 .col {
+    font-weight: 700;
+    background: #e0e1e2; }
+  .main-section .col {
+    width: 16.6667%;
+    border: 1px solid #d8d7d7;
+    text-align: center;
+    height: 7.5vh;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; }
+  .main-section .delete-icon {
+    max-height: 16px;
+    height: 40%;
+    margin-left: 5px;
+    cursor: pointer; }
+  .main-section .booked {
+    background: #e8f0fe; }
+    .main-section .booked:hover {
+      background-color: #d1e2ff; }
+
+.container.create-event {
+  width: 43%;
+  padding-top: 40px; }
+  .container.create-event label {
+    margin-right: 10px; }
+  .container.create-event .event-name-input, .container.create-event .participants-select, .container.create-event .day-select, .container.create-event .time-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; }
+    .container.create-event .event-name-input label, .container.create-event .participants-select label, .container.create-event .day-select label, .container.create-event .time-select label {
+      width: 23.2758%; }
+    .container.create-event .event-name-input input, .container.create-event .event-name-input select, .container.create-event .event-name-input .ui.selection.dropdown, .container.create-event .participants-select input, .container.create-event .participants-select select, .container.create-event .participants-select .ui.selection.dropdown, .container.create-event .day-select input, .container.create-event .day-select select, .container.create-event .day-select .ui.selection.dropdown, .container.create-event .time-select input, .container.create-event .time-select select, .container.create-event .time-select .ui.selection.dropdown {
+      padding: 8px;
+      width: 75%; }
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end; }
+  .form-buttons .form-buttons__cancel {
+    margin-right: 15px; }
+  .form-buttons .form-buttons__create {
+    background: #e8f0fe;
+    margin-right: 0; }
+    .form-buttons .form-buttons__create:hover {
+      background: #d1e2ff; }
+
+/*Multiselect*/
+.multiselect-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: visible;
+  vertical-align: middle; }
+
+.multiselect-label {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 5px; }
+
+.multiselect-data-container {
+  position: relative;
+  overflow: visible;
+  vertical-align: middle; }
+
+.multiselect-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  cursor: pointer; }
+
+.multiselect-text {
+  border: 0;
+  padding: 3px 0;
+  width: 145px; }
+
+.multiselect-button input,
+.multiselect-button b {
+  pointer-events: none; }
+
+.multiselect-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  max-height: 250px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  border-radius: 4px;
+  list-style-type: none;
+  overflow: auto;
+  z-index: 1000; }
+
+.multiselect-item-label {
+  display: block;
+  height: 100%;
+  border: 1px solid transparent; }
+
+.multiselect-item-label--active {
+  border: 1px solid #b7b7b7; }
+
+.multiselect-clear {
+  padding: 0 5px; }
+
+.carret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent; }
+
+.multiselect-item-label--select-all {
+  font-weight: bold;
+  border-bottom: 1px solid #b7b7b7;
+  padding: 5px; }
+
